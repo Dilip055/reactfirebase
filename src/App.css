@@ -1,38 +1,123 @@
-.App {
-  text-align: center;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family:cursive;
+    background: #333;
+}
+.create,.login{
+    background-color: #222;
+    border-radius: 5px;
+    padding: 30px 22px 105px;
+    border: 1px solid;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+form{
+    display: flex;
+    
+    flex-direction: column;
+}
+.container{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 100vh;
+}
+form h1{
+    
+    font-size: 2em;
+    color: #0f0;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+
+}
+input{ border: none;
+    margin-bottom: 15px;
+    padding: 10px 10px 10px 10px;
+    background-color: #333;
+    color: #fff;
+  font-weight: 500;
+  font-size: 1em;
+  border-radius: 4px;
+}
+input:focus
+   {
+    outline: none;
+  
+  color: #fff;
+}
+.login-btn a{
+    text-decoration: none;
+    font-size: 1rem;
+    color: #0f0;
+    background-color: transparent;
+    float: right;
+    letter-spacing: 0.1rem;
+    
+  font-weight: 600;
+  margin-bottom: 25px;
+  border-radius: 5px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+    
+
+ .create-btn {
+    border-radius: 5px;
+    padding: 10px 30px;
+    background: #0f0;
+    color: #000;
+    font-weight: 600;
+    font-size: 1em;
+    letter-spacing: 0.02em;
+    cursor: pointer;
+}
+.logout{
+    margin-top: 20px;
+    background: #0f0;
+    border-radius: 5px;
+    padding: 5px 20px;
+    font-weight: 600;
+    font-size: 0.8em;
+}
+.logged-in, .text{
+    text-align: center;
+    margin-top: 10px;
+    color:#0f0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
+@media(max-width:1024px){
+    form h1 {
+        font-size: 1.5rem;
+        color: #0f0;
+        text-transform: uppercase;
+        margin-bottom: 25px;
+    }
+    
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@media(max-width:768px){
+    .create {
+        background-color: #222;
+        border-radius: 5px;
+        padding: 30px 12px 60px;
+        border: 1px solid;
+    }
+    form h1 {
+        font-size: 1rem;
+    }
+    input{
+        padding: 6px;
+    }
+    .create-btn {
+        border-radius: 10px;
+        padding: 4px 30px;
+    }
+    
+}
+@media(max-width:320px){
+    .login-btn a{
+        font-size: 0.8rem;
+    }
 }
